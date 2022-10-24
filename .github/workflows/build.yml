@@ -15,6 +15,6 @@ jobs:
       env:
         DEPLOY_REPO: ventoso/ventoso.github.io
         DEPLOY_BRANCH: build
-        DEPLOY_KEY: ${{ secrets.ACTION_ACCESS_TOKEN }}
+        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
         # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
         TZ: Asia/Shanghai
