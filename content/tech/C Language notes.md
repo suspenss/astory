@@ -4,6 +4,7 @@
  tags = ["C","alogrithmes"] 
  slug = "C_Language_notes"
  gitinfo = true
+ align = false
 +++
 
 

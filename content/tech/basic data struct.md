@@ -3,6 +3,7 @@
  date = "2022-10-24T21:05:48+08:00" 
  tags = ["C","data struct"] 
  slug = "basic_data_struct"
+ align = false
 +++
 ## list
 list as a abstract data type .      
