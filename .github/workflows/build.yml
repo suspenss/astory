@@ -1,35 +1,20 @@
-name: deploy
+name: build
 
 on:
-    push:
-    workflow_dispatch:
-    schedule:
-        # Runs everyday at 8:00 AM
-        - cron: "0 0 * * *"
+  push:
+    branches:
+    - master
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v2
-              with:
-                  submodules: true
-                  fetch-depth: 0
+  build:
+    runs-on: ubuntu-latest
 
-            - name: Setup Hugo
-              uses: peaceiris/actions-hugo@v2
-              with:
-                  hugo-version: "latest"
-
-            - name: Build Web
-              run: hugo
-
-            - name: Deploy Web
-              uses: peaceiris/actions-gh-pages@v3
-              with:
-                  PERSONAL_TOKEN: ${{ secrets.ACTION_ACCESS_TOKEN }}
-                  EXTERNAL_REPOSITORY: ventoso/ventoso.github.io
-                  PUBLISH_BRANCH: master
-                  PUBLISH_DIR: ./public
-                  commit_message: ${{ github.event.head_commit.message }}
+    steps:
+    - name: 'Building...'
+      uses: reuixiy/hugo-deploy@v1
+      env:
+        DEPLOY_REPO: ventoso/ventoso.github.io
+        DEPLOY_BRANCH: build
+        DEPLOY_KEY: ${{ secrets.ACTION_ACCESS_TOKEN }}
+        # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+        TZ: Asia/Shanghai
