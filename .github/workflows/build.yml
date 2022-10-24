@@ -17,8 +17,5 @@ jobs:
         DEPLOY_BRANCH: build
         DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
         # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-<<<<<<< HEAD
         TZ: Asia/Shanghai
-=======
-        TZ: Asia/Shanghai
->>>>>>> 5a86af7ee5860b4a8bd4130f550564f06605764f
+
