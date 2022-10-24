@@ -1,0 +1,154 @@
+{
+  "main": {
+    "id": "e4fa6d1adf920e8b",
+    "type": "split",
+    "children": [
+      {
+        "id": "aff614d783b4cde0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d4a66e8b22642175",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "tech/basic data struct.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fd45c3b7c6cfe1f2",
+    "type": "split",
+    "children": [
+      {
+        "id": "f09bb86e7406cfd9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f3b9cc67c69f3c01",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "012cd2a4c1ea8484",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b57ac99ab49cff51",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "e41758abef95a28f",
+    "type": "split",
+    "children": [
+      {
+        "id": "b81e3257d977dd52",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e0de9fa1c1ef186d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "tech/basic data struct.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "330b8dc11d76f6d2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "tech/basic data struct.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e88725ed3e092b38",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "4759397f5cb6f4f5",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "tech/basic data struct.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "d4a66e8b22642175",
+  "lastOpenFiles": [
+    "tech/C Language notes.md",
+    "tech/docs by vuepress.md",
+    "tech/basic data struct.md",
+    "政治经济学读书会读书笔记.md",
+    "pen/philosophy/政治经济学读书会读书笔记.md",
+    "pen/philosophy/谢林的自然哲学3.md",
+    "pen/philosophy/_index.md",
+    "资本主义与精神分裂-千高原.md"
+  ]
+}
