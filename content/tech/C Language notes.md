@@ -43,7 +43,7 @@ int judge(int n) {
 ```
       
 #### guess the right apple
-``` c
+```c
 #include <stdio.h>
 int main () {
     int n, cnt1=0, cnt2=0 ,cnt3=0;

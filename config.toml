@@ -593,8 +593,8 @@ uglyURLs = false
     # 网页头部元数据、搜索引擎优化（SEO）、社交网络发现
 
     jsonLD = true
-    openGraph = true
-    twitterCards = true
+    openGraph = false
+    twitterCards = false
     # 注意：如果你设置 twitterCards 为 `true`，
     #      请务必开启 openGraph。否则，网页的
     #      Twitter Cards 信息将会不完整。
@@ -764,7 +764,7 @@ uglyURLs = false
     duration = 0.5
 
     # 浅色模式的主色
-    primaryColorLight = "220, 90%, 56%"
+    primaryColorLight = "231, 21%, 36%"
     # 深色模式的主色
     primaryColorDark = "201, 65%, 62%"
     # 注意：只支持 HSL 颜色值
