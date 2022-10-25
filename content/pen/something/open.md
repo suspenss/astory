@@ -1,12 +1,9 @@
----
-title: 所有开始都应该有的呼喊
-date: 2020-01-01
-tags:
- - pen
- - open
-slug : "open"
-align : false
---- 
++++
+ title = "所有开始都应该有的呼喊" 
+ date = "2020-01-01T21:05:48+08:00" 
+ tags = ["pen","open"] 
+ slug = "open"
++++
 
 <img src="http://p1.music.126.net/Tc4CjU09TSvT5RYoUkefAQ==/5832909185477190.jpg?param=640y300" class="align-center">
 
