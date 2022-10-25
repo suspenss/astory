@@ -203,7 +203,7 @@ uglyURLs = false
     #     post = "archive"
     [[menu.main]]
         pageref = "/categories/"
-        name = "Categorise"
+        name = " Categorise "
         weight = 3
         pre = "internal"
         # post = "th"
@@ -238,7 +238,7 @@ uglyURLs = false
     #     # identifier = "life"
     [[menu.main]]
         url = "/archives/"
-        name = "Archives"
+        name = "Archives "
         weight = 1
         pre = "internal"
         # post = "archive"
@@ -251,7 +251,7 @@ uglyURLs = false
     #     identifier = "tech"
     [[menu.main]]
         pageref = "/about/"
-        name = "About"
+        name = " About"
         weight = 5
         pre = "internal"
         # post = "user-circle"
@@ -764,7 +764,7 @@ uglyURLs = false
     duration = 0.5
 
     # 浅色模式的主色
-    primaryColorLight = "231, 21%, 36%"
+    primaryColorLight = "201, 10%, 20%"
     # 深色模式的主色
     primaryColorDark = "201, 65%, 62%"
     # 注意：只支持 HSL 颜色值
