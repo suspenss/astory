@@ -1,3 +1,3 @@
 ---
-title: 'philosophy'
+title: 'Philosophy'
 ---

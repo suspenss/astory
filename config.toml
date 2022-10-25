@@ -764,7 +764,7 @@ uglyURLs = false
     duration = 0.5
 
     # 浅色模式的主色
-    primaryColorLight = "201, 10%, 20%"
+    primaryColorLight = "220, 90%, 56%"
     # 深色模式的主色
     primaryColorDark = "201, 65%, 62%"
     # 注意：只支持 HSL 颜色值
