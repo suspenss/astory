@@ -79,6 +79,23 @@ Insert an element at the end of the link list, the time compl-exity is  $O(n)$ .
 Insert an element at the head of the link list, the time complexity is $O(1)$ .            
 Insert an element between head and end of the link list, the time complexity is $O(n)$ .    
 
-##### Ease of use
+##### 4. Ease of use
 **Array > Link list**
 
+#### Implementation in c/c++
+
+节点，先画逻辑视图
+
+末尾的节点的指针内是NULL
+
+data,link
+
+再定义一个指针，指向链表中的节点
+
+节点是一个数据类型，一个存储数据，一个存储链接
+typedef struct _node {
+	int value;
+	struct _node* node;
+} Node;
+
+用结构体去定义链表，而在实现链表的时候，每新增一个节点，都要定义一个
