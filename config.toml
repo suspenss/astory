@@ -309,7 +309,8 @@ uglyURLs = false
     # 说明：对弹性布局的顶栏无效
 
     # 背景
-    headerBackground = "linear-gradient(90deg, #f795331a 0, #f370551a 15%, #ef4e7b1a 30%, #a166ab1a 44%, #5073b81a 58%, #1098ad1a 72%, #07b39b1a 86%, #6dba821a 100%)"
+    headerBackground = "linear-gradient(to right, #0000000a, #f7f8f63a)"    
+    # headerBackground = "linear-gradient(90deg, #f795331a 0, #f370551a 15%, #ef4e7b1a 30%, #a166ab1a 44%, #5073b81a 58%, #1098ad1a 72%, #07b39b1a 86%, #6dba821a 100%)"
     # 说明：https://developer.mozilla.org/zh-CN/docs/Web/CSS/background
 
     # 顶栏布局
@@ -319,7 +320,7 @@ uglyURLs = false
     # 在窄视图下隐藏菜单栏并显示一个按钮？
     enableNavToggle = true
 
-    navHeight = "9em"
+    navHeight = "5em"
     # 说明：菜单栏展开时的高度
 
 
@@ -371,7 +372,7 @@ uglyURLs = false
 
     ## 「诗意人生」
     # 诗句，支持 Markdown
-    homePoetry = ["#### [旋转，跳跃喔](/archives/)", "他感到飞鸟们也在头痛", "冒牌的帕特里克满脑子", "都是稳妥的独角戏", "那些男孩爱的男人爱机器，机器爱法律，法律是你"]
+    homePoetry = ["#### [What can I hold you with?](/archives/)", "I can give you my loneliness, my darkness", "he hunger of my heart", "I am trying to bribe you with uncertainty","with danger, with defeat."]
     
     # 底部链接的内间距，单位：em
     homeLinksPadding = 1
@@ -1017,7 +1018,7 @@ uglyURLs = false
     ######################################
     ## 字号（单位：px）
 
-    fontSize = 18
+    fontSize = 17
 
     ######################################
     ## 制表符的宽度
