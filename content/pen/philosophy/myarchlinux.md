@@ -1,13 +1,13 @@
 +++
  title = "Under the GNU, Linux and Open Source" 
  date = "2022-11-03T21:49:46+08:00" 
- tags = ["linux","gnome"] 
- slug = "linuxnote1"
+ tags = ["linux","GNU"] 
+ slug = "ideologyaboutopensource"
  description = ""
  # indent = true
 +++
 ####
-After watch the old [documentry](https://www.youtube.com/watch?v=zPt_e9Cdk08) of the linux 
+After watching the old [documentry](https://www.youtube.com/watch?v=zPt_e9Cdk08) of the linux 
 history, we must be thinking about the open source movement and the morden ideology.
 ####
 
@@ -23,14 +23,4 @@ history, we must be thinking about the open source movement and the morden ideol
 
 
 
-
-#### some options and configruations on linux
-
-这些天把linux装回来了, `gnome`桌面系统，N卡闭源驱动加`wayland`，和这台破机器运行的 win11 相比，linux 要流畅太多了，装机不易，耗时耗力，然而谁有没有做过无聊的事情呢? 有时候我们只是需要暂时脱离宏大叙事，感受一下个人的悲欢而已。
-
-
-#### gnome desktop
-##### change to the wayland in nvidia driver
-
-in open source driver, it's wayland in 默认 setting, but if u are 闭源驱动 , we must .
 
