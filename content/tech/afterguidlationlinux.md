@@ -12,7 +12,8 @@
 
 
 ##### grub and touble system
-使用 grub 引导双系统 win11 和 arch linux， 需要安装 os-prober 并编辑 `/etc/default/grub`。
+使用 grub 引导双系统 win11 和 arch linux， 需要安装 os-prober。                
+编辑 `/etc/default/grub`。
 ```
 # /etc/default/grub
 # 找到下方内容并取消注释
