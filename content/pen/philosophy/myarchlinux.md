@@ -1,5 +1,5 @@
 +++
- title = "Under the GNU, Linux and Open Source" 
+ title = "GNU/Linux and Open Source" 
  date = "2022-11-03T21:49:46+08:00" 
  tags = ["linux","GNU"] 
  slug = "ideologyaboutopensource"

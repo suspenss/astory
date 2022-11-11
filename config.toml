@@ -203,7 +203,7 @@ uglyURLs = false
     #     post = "archive"
     [[menu.main]]
         pageref = "/categories/"
-        name = " Categorise "
+        name = " categories"
         weight = 3
         pre = "internal"
         # post = "th"
@@ -238,7 +238,7 @@ uglyURLs = false
     #     # identifier = "life"
     [[menu.main]]
         url = "/archives/"
-        name = "Archives "
+        name = "archives "
         weight = 1
         pre = "internal"
         # post = "archive"
@@ -251,7 +251,7 @@ uglyURLs = false
     #     identifier = "tech"
     [[menu.main]]
         pageref = "/about/"
-        name = " About"
+        name = " about"
         weight = 5
         pre = "internal"
         # post = "user-circle"
@@ -275,8 +275,8 @@ uglyURLs = false
 
     ## 链接栏
     # [[menu.links]]
-    #     pageref = "/"
-    #     name = "Home"
+    #     pageref = "/tech/"
+    #     name = "blowing"
     #     weight = 1
     #     pre = "internal"
     [[menu.links]]
@@ -284,11 +284,11 @@ uglyURLs = false
         name = "Tags"
         weight = 2
         pre = "internal"
-    # [[menu.links]]
-    #     pageref = "/"
-    #     name = "Coldplay"
-    #     weight = 3
-    #     pre = "internal"
+    [[menu.links]]
+        pageref = "/pen/"
+        name = "pen"
+        weight = 3
+        pre = "internal"
 
 ##########################################
 # 主题配置
@@ -372,7 +372,7 @@ uglyURLs = false
 
     ## 「诗意人生」
     # 诗句，支持 Markdown
-    homePoetry = ["#### [What can I hold you with?](/archives/)", "I can give you my loneliness, my darkness", "he hunger of my heart", "I am trying to bribe you with uncertainty","with danger, with defeat."]
+    homePoetry = ["##### [What can I hold you with?](/archives/)", "I can give you my loneliness, my darkness", "he hunger of my heart", "I am trying to bribe you with uncertainty","with danger, with defeat."]
     
     # 底部链接的内间距，单位：em
     homeLinksPadding = 1
