@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: 'Building...'
-      uses: reuixiy/hugo-deploy@v1
+      uses: reuixiy/hugo-deploy@master
       env:
         DEPLOY_REPO: ventoso/ventoso.github.io
         DEPLOY_BRANCH: build
