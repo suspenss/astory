@@ -203,7 +203,7 @@ uglyURLs = false
     #     post = "archive"
     [[menu.main]]
         pageref = "/categories/"
-        name = " categories"
+        name = " Categories"
         weight = 3
         pre = "internal"
         # post = "th"
@@ -238,7 +238,7 @@ uglyURLs = false
     #     # identifier = "life"
     [[menu.main]]
         url = "/archives/"
-        name = "archives "
+        name = "Archives "
         weight = 1
         pre = "internal"
         # post = "archive"
@@ -251,7 +251,7 @@ uglyURLs = false
     #     identifier = "tech"
     [[menu.main]]
         pageref = "/about/"
-        name = " about"
+        name = " About"
         weight = 5
         pre = "internal"
         # post = "user-circle"
@@ -473,7 +473,7 @@ uglyURLs = false
     # 列表页面
 
     # 宽度
-    listWidth = ""
+    listWidth = "40"
     # 说明：如果留空（""），则用 42 作为默认值
     #      单位：em
 
@@ -772,7 +772,7 @@ uglyURLs = false
     # 注意：只支持 HSL 颜色值
 
     # 文章的内容宽度
-    postWidth = 42
+    postWidth = 40
     # 说明：如果留空（""），则用 42 作为默认值
     #      单位：em
 
