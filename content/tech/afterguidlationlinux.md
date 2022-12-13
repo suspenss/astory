@@ -10,6 +10,10 @@
 
 这些天把  Arch linux 装回来了, gnome 43，nvidia 闭源驱动加 wayland，和这台破机器运行的 windows11 相比，linux 要流畅太多了，装机不易，耗时耗力，然而谁有没有做过无聊的事情呢? 有时候我们只是需要暂时脱离宏大叙事，感受一下个人的悲欢而已，所以写文章要先撇清和所有类型主义的关系。
 
+[12月13日更新]()            
+在咸鱼上购入一台2020款的联想小新pro13，自然也是换了linux，依然是arch。
+
+
 
 ##### grub and dual system
 使用 grub 引导双系统 win11 和 arch linux， 需要安装 os-prober。                
@@ -42,18 +46,46 @@ nvidia-drm.modeset=1
 sudo ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
 ```
 
+[12月13日更新]()     
+笔记本没有独立显卡，核心显卡驱动开源且以被整合进内核当中，原生支持wayland。
+##### Fish shell
+采用了影响较小的方法去启用 fish shell 而不是去改变默认shell
 
-##### Paru, a aur helper
-请编译安装。
-##### Helix, a post-morden editor
+```
+~/.bashrc     # 在 .bashrc 文件内添加 fish 指令，即在启动终端模拟器时会默认执行一次 fish
+
+fish
+````
+
+##### Pipewire及wayland下的屏幕录制问题
+
+安装 pipewire-media-session 即可
+
+```
+ sudo pacman -S pipewire-media-session
+```
+##### Paru - a aur helper
+请编译 (makepkg) 安装。
+
+##### Helix - a post-morden editor
 Helix 是一款由 Rust 编写的开箱即用的类 vim + kakoune 的..后现代..[^1]编辑器。
-在 archlinux 官方源里面已经有打包好的安装包，直接用包管理器安装即可，不用编译所有的语法树，但是命令会从 hx 变为 helix。
+在 archlinux 社区源里面已经有打包好的安装包，直接用包管理器安装即可，不用编译所有的语法树，但是命令会从 hx 变为 helix。
 
 ```
 whereis helix
 ```          
 
 找到 helix 二进制文件的路径，重命名即可。
+
+##### 解决 grub 字体过小的问题
+
+安装 grub-customizer
+
+```
+ paru -S grub-customizer
+```
+在 gui 界面中调整字体大小即可 
+
 
 
 [^1]: 至少官网是这么说的。
