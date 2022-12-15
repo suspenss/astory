@@ -204,7 +204,7 @@ uglyURLs = false
     [[menu.main]]
         pageref = "/categories/"
         name = " Categories"
-        weight = 3
+        weight = 4
         pre = "internal"
         # post = "th"
     # [[menu.main]]
@@ -222,33 +222,33 @@ uglyURLs = false
     [[menu.main]]
         weight = 6
         identifier = "theme-switcher"
-    [[menu.main]]
-        weight = 7
-        identifier = "lang-switcher"
+    # [[menu.main]]
+    #     weight = 7
+    #     identifier = "lang-switcher"
     # [[menu.main]]
     #     weight = 8
     #     identifier = "search"
     #     post = "search"
-    # [[menu.main]]
-    #     pageref = "/pen/philosophy/"
-    #     name = "Philosophy"
-    #     weight = 2
-    #     pre = "internal"
-    #     # post = "grav"
-    #     # identifier = "life"
     [[menu.main]]
-        url = "/archives/"
-        name = "Archives "
-        weight = 1
+        pageref = "/pen/"
+        name = "Pen"
+        weight = 2
         pre = "internal"
-        # post = "archive"
+        # post = "grav"
+        # identifier = "life"
     # [[menu.main]]
-    #     pageref = "/tech/"
-    #     name = "tech"
-    #     weight = 2
+    #     url = "/archives/"
+    #     name = "Archives "
+    #     weight = 1
     #     pre = "internal"
-    #     post = "wpexplorer"
-    #     identifier = "tech"
+    #     # post = "archive"
+    [[menu.main]]
+        pageref = "/tech/"
+        name = "Tech"
+        weight = 2
+        pre = "internal"
+        # post = "wpexplorer"
+        # identifier = "tech"
     [[menu.main]]
         pageref = "/about/"
         name = " About"
