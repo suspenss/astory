@@ -2,7 +2,7 @@
  title = "再风" 
  date = "2022-12-13T21:49:46+08:00" 
  tags = ["nothing"] 
- slug = "windbegining"
+ slug = "windagaining"
  description = ""
  indent = true
 +++
