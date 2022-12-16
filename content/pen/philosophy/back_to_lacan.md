@@ -2,7 +2,7 @@
  title = "回到拉康" 
  date = "2022-12-14T21:49:46+08:00" 
  tags = ["philosophy","lacan", "Psychoanalysis"] 
- slug = "back_lacan"
+ slug = "BackToLacan"
  description = ""
  katex = true
  # indent = true
