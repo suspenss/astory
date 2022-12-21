@@ -32,7 +32,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ##### wayland and nvidia close source driver
 这台破机器在 x11 的 gnome 下打字延迟很严重，所以切换到了 wayland，为了性能也需要安装 nvidia 闭源驱动，所以列出在这种情况下开启 wayland 的方法。
 
-检查 nvidia 驱动版本是否大于 R490 
+检查 nvidia 驱动版本是否大于 490 
 
 ```
 # Add the kernel parameter 
