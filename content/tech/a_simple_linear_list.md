@@ -66,7 +66,8 @@ _Bool list_insert(struct List *list, T element, int index) {
         list -> size += 1;   
         return 1;
     } else {
-        printf("fail to insert element: %d, index out of bound\n", element);
+        printf("fail to insert element: %d, index out of bound\n",
+                 element);
         return 0;
     }
 } 
