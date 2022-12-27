@@ -13,11 +13,7 @@ min :: Ord a => a -> a -> a
 max :: Ord a => a -> a -> a
 
 "abc" == 'a' : 'b' : 'c' : []
-````
 
-函数调用拥有最高的优先级
-
-``` haskell
 doubleMe x = x * 2
 doubleUs x y = doubleMe x + doubleMe y
 doubleSmallNumber x = if x > 100
@@ -75,7 +71,83 @@ calcbmis xs = [bmi w h | (w, h) <- xs]
 calcbmis' :: RealFloat a => [(a, a)] -> [a]
 calcbmis' xs = [ bmi | (w, h) <- xs, let bmi = w / h ^ 2 ]
 
+myDrop n xs = if n <= 0 || null xs
+              then xs
+              else myDrop (n - 1) (tail xs) 
+
+-- about recursion 
+maximum' :: Ord a => [a] -> a
+maximum' [] = error "maximum of a empty list"
+maximum' [x] = x
+maximum' (x: xs) = max x (maximum' xs)
+
+replicate' :: (Num a, Ord a) => a -> b -> [b]
+replicate' n x
+    | n <= 0 = []
+    | otherwise = x : replicate' (n - 1) x
+
+take' :: (Ord a, Num a)=> a -> [b] -> [b]
+take' n _
+    | n <= 0 = []
+take' _ [] = []
+take' n (x: xs) = x: take' (n - 1) xs
+
+reverse' :: [a] -> [a]
+reverse' [] = []
+reverse' (x: xs) = reverse' xs ++ [x]
+
+repeat' :: a -> [a]
+repeat' x = x: repeat' x
+
+zip' :: [a] -> [b] -> [(a, b)]
+zip' _ [] = []
+zip' [] _ = []
+zip' (x: xs) (y: ys) = (x, y): zip' xs ys
+
+elem' :: Eq a => a -> [a] -> Bool
+elem' a [] = False
+elem' a (x: xs) 
+    | a == x = True
+    | otherwise = elem' a xs
+
+
+
+-- quick sort
+quicksort :: Ord a => [a] -> [a]
+quicksort [] = []
+quicksort (x: xs) =
+    let smallerSorted = quicksort [a | a <- xs, a <= x]
+        biggerSorted = quicksort [a | a <- xs, a >= x]
+    in smallerSorted ++ [x] ++ biggerSorted
+
+
+-- high-order function
+zipWith' :: (a -> b -> c) -> [a] -> [b] -> [c]
+zipWith' _ [] _ = []
+zipWith' _ _ [] = []
+zipWith' f (x: xs) (y: ys) = f x y : zipWith' f xs ys
+
+
 -- fib =  fib(n) = fib(n - 1) + fib(n - 2)
 fibs :: [Integer]
 fibs = 1 : 1 : zipWith (+) fibs (drop 1 fibs)
-```
+
+--  Collatz 串行
+-- function chain
+chain :: Integral a => a -> [a]
+chain 1 = [1]
+chain x 
+    | even x = x: chain (div x 2)   
+    | odd x = x: chain (3 * x + 1)             
+         
+-- number of chains which length biger than 15 -- where version
+numLongChains :: Int
+numLongChains = length (filter isLong (map chain [1..100]))
+    where isLong xs = length xs > 15 
+
+-- lambda version
+-- lambda experssion is (\xs -> length xs > 15)
+-- (\ + 参数 -> 函数体)
+numLongChains' :: Int
+numLongChains' = length (filter (\xs -> length xs > 15) (map chain [1..100]))
+````
