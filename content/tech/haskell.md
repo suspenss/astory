@@ -9,11 +9,6 @@
 
 
 ```` haskell
-min :: Ord a => a -> a -> a
-max :: Ord a => a -> a -> a
-
-"abc" == 'a' : 'b' : 'c' : []
-
 doubleMe x = x * 2
 doubleUs x y = doubleMe x + doubleMe y
 doubleSmallNumber x = if x > 100
@@ -150,4 +145,53 @@ numLongChains = length (filter isLong (map chain [1..100]))
 -- (\ + 参数 -> 函数体)
 numLongChains' :: Int
 numLongChains' = length (filter (\xs -> length xs > 15) (map chain [1..100]))
+
+-- fold
+-- foldl 跟着一个两个参数的匿名函数
+-- 一个是初始值，一个是折叠项，两个参数传入匿名函数中
+-- 然后执行匿名函数中的操作
+sum'' :: Num a => [a] -> a
+sum'' xs = foldl (\acc x -> acc + x) 0 xs
+
+-- fold and curried
+-- 函数的柯里化
+sum''' :: Num a => [a] -> a
+sum''' = foldl (+) 0
+
+length'' :: [a] -> Int
+length'' xs = foldl (\acc x -> acc + 1) 0 xs
+
+myElem :: Eq a => a -> [a] -> Bool
+myElem x xs = foldl (\acc y -> if y == x then True else acc) False xs
+
+myFoldl :: (a -> b -> a) -> a -> [b] -> a
+myFoldl f acc [] = acc
+myFoldl f acc (x: xs) = myFoldl f (f acc x) xs 
+
+myMap :: (a -> b) -> [a] -> [b]
+myMap f xs = foldr (\x acc -> f x : acc) [] xs
+
+-- `++` 运算符性能很差
+myMapLfold :: (a -> b) -> [a] -> [b]
+myMapLfold f xs = foldl (\acc x -> acc ++ [f x]) [] xs
+
+myMaximum :: Ord a => [a] -> a
+-- myMaximum xs = foldl1 (\acc x -> if x > acc then x else acc) xs
+myMaximum = foldl1 (\acc x -> if x > acc then x else acc) 
+
+myReverse :: [a] -> [a]
+myReverse = foldl (\acc x -> x: acc) []
+
+myProduct :: Num a => [a] -> a
+myProduct = foldl1 (*)
+
+myFilter :: (a -> Bool) -> [a] -> [a]
+myFilter f = foldr (\x acc -> if f x then x: acc else acc) []
+
+-- just show, because fold method have tarverse the list
+myHead :: [a] -> a
+myHead = foldr1 (\x _ -> x)
+
+myList :: [a] -> a
+myList = foldl1 (\_ x -> x)
 ````
