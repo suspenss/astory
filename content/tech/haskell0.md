@@ -1,5 +1,5 @@
 +++
- title = "haskell 学习笔记 vol.0" 
+ title = "learn my haskell vol.0" 
  date = "2022-12-24T21:40:48+08:00" 
  tags = ["haskell"] 
  slug = "haskell"
