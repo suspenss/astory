@@ -7,6 +7,7 @@
  align = false
 +++
 
+note 1: some modules and codewars questions
 
 ``` haskell
 import Data.List
@@ -30,19 +31,12 @@ myIntercalate xs yss = drop (length xs) $ foldr (\as acc -> xs ++ as ++ acc) [] 
 -- concat function
 myConcat xss = foldr (\as acc -> as ++ acc) [] xss
 
-
+-- a codewars question
 findMidIndex :: (Num a, Ord a) => [a] -> Int
 findMidIndex xs = length boollist 
     where taillist = tail . map sum . inits $ xs
           headlist = init . map sum . tails $ xs
           boollist = takeWhile (/= True) $ zipWith (==) taillist headlist
-
-
--- binaries
--- code xs = read xs :: Integer
--- code :: Num a => [a] -> [a]
--- code xs = foldl (\acc x -> (acc - (mod acc 2)) : x) i [2, 2..]
-    -- where i = read xs :: Integer
 
 -- codewars
 findNextSquare :: Integer -> Integer
@@ -50,19 +44,45 @@ findNextSquare n
     | ispefect truen = truncate $ head $ filter ispefect [truen + 1..]
     | otherwise = -1
     where truen = fromInteger n
+
 -- ispefect :: Integer -> Bool
 ispefect x = fromIntegral (truncate . sqrt $ x)^2 == x   
 
+--codewars
 rowSumOddNumbers :: Int -> Integer
 rowSumOddNumbers x = sum $ take x $ drop (sum [1..x-1]) [1, 3..]
 
-
 -- https://www.codewars.com/kata/546e2562b03326a88e000020/train/haskell
 squareDigit :: Int -> Int
-squareDigit it = read $ proc it :: Int 
-   where proc = concatMap (show . (^2)) . intToList
+squareDigit it 
+    | it < 0 = negate $ proc (negate it)
+    | otherwise = proc it
+    where proc i = read (concatMap (show . (^2)) . intToListWithShow $ i) :: Int
 
-intToList :: Int -> [Int]
-intToList = everyToDigit . map show . show
+-- 2 function about exchange a number into a list
+
+intToListWithShow :: Int -> [Int]
+intToListWithShow = everyToDigit . map show . show
     where everyToDigit  = map (\x -> digitToInt (read x :: Char)) 
-````
+
+-- pure mathmatic, so I think it has high perfermence
+intToList :: Int -> [Int]
+intToList x  = case x of
+    0 -> [0]
+    a | a < 0 -> reverse . toList . negate $ a 
+    a -> reverse . toList $ a 
+    where toList 0 = []
+          toList a = mod a 10 : (toList . quot a $ 10) 
+
+-- judge a number whether a prime
+isPrime :: Integer -> Bool
+isPrime x = case x of
+    x | x <= 1 -> False
+    2 -> True 
+    _ -> all (\a -> mod x a /= 0) (2 : [ x | x <- [2..truncate . sqrt . fromInteger $ x], odd x])
+
+-- compute the number of digits
+countNumOfDigit :: Int -> Int
+countNumOfDigit 0 = 0
+countNumOfDigit x = 1 + (countNumOfDigit . quot x $ 10)
+```
