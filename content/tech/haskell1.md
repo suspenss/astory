@@ -7,8 +7,9 @@
  align = false
 +++
 
-note 1: some modules and codewars questions
+about this note 1: some modules and codewars questions
 
+### Modules Codes
 ``` haskell
 import Data.List
 import Data.Char
@@ -105,12 +106,6 @@ perimeter x = 4 * (sum . take (fromInteger x + 1) $ fibs) :: Integer
 fibs :: [Integer]
 fibs = 1 : 1 : zipWith (+) fibs (drop 1 fibs) 
 
--- https://www.codewars.com/kata/5842df8ccbd22792a4000245/train/haskell
-expandedForm :: Int -> String
-expandedForm = drop 3 . process . show  where
-    process [] = []
-    process (x: xs) = expandList ++ process xs  where 
-        expandList = if x /= '0' then " + " ++ x : replicate (length xs) '0' else [] 
 
 rot13 :: String -> String
 rot13 = map rot where
@@ -121,6 +116,23 @@ rot13 = map rot where
         | isAlpha x && ord x < 91 = chr (64 + mod (ord x - 64 + 13) 26)
         | otherwise = x
 
+
+```
+### CodeWars Questions
+
+ ##### Maximum subarray sum
+
+The maximum sum subarray problem consists in finding the maximum sum of a contiguous subsequence in an array or list of integers:
+
+``` 
+maxSequence [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+-- should be 6: [4, -1, 2, 1]
+```
+Easy case is when the list is made up of only positive numbers and the maximum sum is the sum of the whole array. If the list is made up of only negative numbers, return 0 instead.
+
+Empty list is considered to have zero greatest sum. Note that the empty list or array is also a valid sublist/subarray.
+
+```` haskell
 -- Maximum Subarray
 maxSequence :: [Int] -> Int
 maxSequence = maximum . scanl (\acc x -> max 0 acc + x) 0
@@ -135,5 +147,25 @@ maxSequence' :: [Int] -> Int
 maxSequence' ls =  maximum (map sum allSubArray)  where
     allSubArray = [ y | x <- okls, y <- x, sum y == maximum (map sum x)]
     okls = map inits $ tails ls
+````
 
+##### Write Number in Expanded Form
+You will be given a number and you will need to return it as a string in Expanded Form. For example:
+
+````
+expandedForm 12    -- Should return '10 + 2'
+expandedForm 42    -- Should return '40 + 2'
+expandedForm 70304 -- Should return '70000 + 300 + 4'
+````
+
+NOTE: All numbers will be whole numbers greater than 0.
+
+If you liked this kata, check out part 2!!
+
+``` haskell
+expandedForm :: Int -> String
+expandedForm = drop 3 . process . show  where
+    process [] = []
+    process (x: xs) = expandList ++ process xs  where 
+        expandList = if x /= '0' then " + " ++ x : replicate (length xs) '0' else [] 
 ```
