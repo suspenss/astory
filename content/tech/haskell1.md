@@ -8,8 +8,9 @@
 +++
 
 note 1: some modules and codewars questions
-``` haskell
 
+``` haskell
+import Data.List
 import Data.Char
 
 search needle haystack =
@@ -134,6 +135,5 @@ maxSequence' :: [Int] -> Int
 maxSequence' ls =  maximum (map sum allSubArray)  where
     allSubArray = [ y | x <- okls, y <- x, sum y == maximum (map sum x)]
     okls = map inits $ tails ls
-
 
 ```
