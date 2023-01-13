@@ -8,9 +8,8 @@
 +++
 
 note 1: some modules and codewars questions
-
 ``` haskell
-import Data.List
+
 import Data.Char
 
 search needle haystack =
@@ -62,11 +61,10 @@ squareDigit it
 -- 2 function about exchange a number into a list
 
 intToListWithShow :: Int -> [Int]
-intToListWithShow = everyToDigit . map show . show
-    where everyToDigit  = map (\x -> digitToInt (read x :: Char)) 
+intToListWithShow = map digitToInt . show
 
 -- pure mathmatic, so I think it has high perfermence
-intToList :: Int -> [Int]
+intToList :: Integral a => a -> [a]
 intToList x  = case x of
     0 -> [0]
     a | a < 0 -> reverse . toList . negate $ a 
@@ -74,7 +72,7 @@ intToList x  = case x of
     where toList 0 = []
           toList a = mod a 10 : (toList . quot a $ 10) 
 
--- judge a number whether a prime
+-- determining weather a number is prime
 isPrime :: Integer -> Bool
 isPrime x = case x of
     x | x <= 1 -> False
@@ -85,4 +83,57 @@ isPrime x = case x of
 countNumOfDigit :: Int -> Int
 countNumOfDigit 0 = 0
 countNumOfDigit x = 1 + (countNumOfDigit . quot x $ 10)
+
+-- codewars
+duplicateEncode :: String -> String
+duplicateEncode xs = map encode xs'
+    where xs' = map toLower xs
+          encode x = if (length . filter (== x) $ xs') > 1 then ')' else '('
+
+-- Sorry for the name of the function.
+inArray :: [String] -> [String] -> [String]
+inArray a1 a2 = foldr (\x acc -> if search x $ unwords a2 then x : acc else acc ) [] a1
+
+-- search needle haystack =
+    -- let nlen = length needle
+    -- in foldl (\acc x -> if take nlen x == needle then True else acc) False $ tails haystack
+
+perimeter :: Integer -> Integer
+perimeter x = 4 * (sum . take (fromInteger x + 1) $ fibs) :: Integer
+
+fibs :: [Integer]
+fibs = 1 : 1 : zipWith (+) fibs (drop 1 fibs) 
+
+-- https://www.codewars.com/kata/5842df8ccbd22792a4000245/train/haskell
+expandedForm :: Int -> String
+expandedForm = drop 3 . process . show  where
+    process [] = []
+    process (x: xs) = expandList ++ process xs  where 
+        expandList = if x /= '0' then " + " ++ x : replicate (length xs) '0' else [] 
+
+rot13 :: String -> String
+rot13 = map rot where
+    rot 'm' = 'z'
+    rot 'M' = 'Z'
+    rot x
+        | isAlpha x && ord x > 96 = chr (96 + mod (ord x - 96 + 13) 26) 
+        | isAlpha x && ord x < 91 = chr (64 + mod (ord x - 64 + 13) 26)
+        | otherwise = x
+
+-- Maximum Subarray
+maxSequence :: [Int] -> Int
+maxSequence = maximum . scanl (\acc x -> max 0 acc + x) 0
+-- 我靠，这串代码太牛了
+
+maxSubArray1 :: (Num a, Ord a) => [a] -> [a]
+maxSubArray1 ls = head [a | a <- allSubArray, sum a == maximum (map sum allSubArray)]  where
+    allSubArray = [ y | x <- okls, y <- x, sum y == maximum (map sum x)]
+    okls = map inits $ tails ls
+-- https://www.codewars.com/kata/54521e9ec8e60bc4de000d6c/train/haskell
+maxSequence' :: [Int] -> Int
+maxSequence' ls =  maximum (map sum allSubArray)  where
+    allSubArray = [ y | x <- okls, y <- x, sum y == maximum (map sum x)]
+    okls = map inits $ tails ls
+
+
 ```
