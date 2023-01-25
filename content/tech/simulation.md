@@ -91,3 +91,53 @@ int main() {
     return 0;
 }
 ```
+
+### 高精度阶乘之和
+高精度乘 + 高精度加法，简单的组合
+
+``` cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int a[100], b[101] = {0};
+
+void mult(int x) {
+    int cur = 0;
+    for (int i = 1; i < 100; i++) {
+        a[i] = a[i] * x + cur;
+        cur = a[i] / 10;
+        a[i] = a[i] % 10;
+    }
+}
+void allplus() {
+    int cur = 0;
+    for (int i = 1; i < 100; i++) {
+        b[i] = b[i] + a[i] + cur;
+        cur = b[i] / 10;
+        b[i] = b[i] % 10;
+    }
+    b[100] = cur;
+}
+int main() {
+    int n;
+    a[1] = 1, b[1] = 1;
+    cin >> n;
+    for (int i = 2; i <= n; i++) {
+        for (int o = 2; o < 100; o++) {
+            a[o] = 0;
+        }
+        a[1] = 1;
+        for (int j = 1; j <= i; j++) {
+            mult(j);
+        }
+        allplus();
+    }
+    int len = 100;
+    while (b[len] == 0 && len > 1) {
+        len--;
+    }
+    for (int i = len; i > 0; i--) {
+        cout << b[i];
+    }
+}
+```
