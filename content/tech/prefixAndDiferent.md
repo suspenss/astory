@@ -3,8 +3,8 @@
  date = "2023-01-29T21:40:48+08:00" 
  tags = ["alogrithmes"] 
  slug = "prefixdif"
- gitinfo = true
- align = false
+ # gitinfo = true
+ # align = true
  katex = true
 +++
 
@@ -53,28 +53,32 @@ $ \ \ \ \ = sum_{[(0, 0) \rightarrow (x_2, y_2)]} - sum_{[(0, 0) \rightarrow (x_
 ##### 示例代码
 初始化样例数组 partion
 ``` cpp
-    int partion[3][4] = {
-        {1, 5, 6, 8},
-        {9, 6, 7, 3},
-        {5, 3, 2, 4},
-    };
+  int partion[3][4] = {
+      {1, 5, 6, 8},
+      {9, 6, 7, 3},
+      {5, 3, 2, 4},
+  };
 ```
 
 创建前缀和数组
 ``` cpp
-    int sum[4][5] = {0}; // initalize prefix martix to 0
-    sum[1][1] = partion[0][0];
-    for (int i = 1; i < 4; i++) 
-        for (int j = 1; j < 5; j++) 
-            sum[i][j] = sum[i - 1][j] + sum[i][j - 1] - 
-                        sum[i - 1][j - 1] + partion[i - 1][j - 1];    
+  int sum[4][5] = {0}; // initalize prefix martix to 0
+  sum[1][1] = partion[0][0];
+  for (int i = 1; i < 4; i++) 
+      for (int j = 1; j < 5; j++) 
+          sum[i][j] = sum[i - 1][j] + sum[i][j - 1] - 
+                      sum[i - 1][j - 1] + partion[i - 1][j - 1];    
 ```
 
 Query
 ``` cpp
-    int query, x1 = 2, y1 = 2, x2 = 3, y2 = 3;
-    query =
-        sum[x2][y2] + sum[x1 - 1][y1 - 1] - 
-        sum[x1 - 1][y2] - sum[x2][y1 - 1] ;
-    cout << query << endl;
+  int query, x1 = 2, y1 = 2, x2 = 3, y2 = 3;
+  query =
+      sum[x2][y2] + sum[x1 - 1][y1 - 1] - 
+      sum[x1 - 1][y2] - sum[x2][y1 - 1] ;
+  cout << query << endl;
 ```
+
+
+### 二维差分
+
