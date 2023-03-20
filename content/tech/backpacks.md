@@ -18,7 +18,7 @@ f[i][j] = max(f[i - 1][j], f[i - 1][j - v] + w)
 
 optimize the space complexity:
 ``` 
-for (int j = V; j >= v[i]; i++) {
+for (int j = V; j >= v[i]; i--) {
 	f[j] = std::max(f[j], f[j - v[i]] + w[i]);
 }
 ```
@@ -88,7 +88,7 @@ and so far, we can process rest question in zero-one modle;
 
 #### mixd backpacks
 
-mixd with zero-one backpacks, full-backpacks and multiple backpacks(alse from zero-one modle), we just transform the input into blow modle and store data, finally we assemble equation on demand.
+the question mixd with zero-one backpacks, full-backpacks and multiple backpacks(also from zero-one modle), we just transform the input into below modle and store transformed data, finally we just transfer the correspond equation on demand.
 
 
 
