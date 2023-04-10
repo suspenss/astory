@@ -242,11 +242,11 @@ uglyURLs = false
     #     weight = 1
     #     pre = "internal"
     #     # post = "archive"
-    [[menu.main]]
-        pageref = "/tech/"
-        name = "Tech"
-        weight = 2
-        pre = "internal"
+    # [[menu.main]]
+    #     pageref = "/tech/"
+    #     name = "Tech"
+    #     weight = 2
+    #     pre = "internal"
         # post = "wpexplorer"
         # identifier = "tech"
     [[menu.main]]
@@ -373,7 +373,7 @@ uglyURLs = false
 
     ## 「诗意人生」
     # 诗句，支持 Markdown
-    homePoetry = ["##### [What can I hold you with?](/archives/)", "I can give you my loneliness, my darkness", "he hunger of my heart", "I am trying to bribe you with uncertainty","with danger, with defeat."]
+    homePoetry = ["##### [What can I hold you with?](/archives/)", "I can give you my loneliness, my darkness", "the hunger of my heart", "I am trying to bribe you with uncertainty","with danger, with defeat."]
     
     # 底部链接的内间距，单位：em
     homeLinksPadding = 1
@@ -522,7 +522,7 @@ uglyURLs = false
     # 说明：分区的名字即站点的 content 目录下
     #      的文件夹的名字。
 
-    mainSections = ["tech","pen"]
+    mainSections = ["pen"]
 
 
     ######################################
