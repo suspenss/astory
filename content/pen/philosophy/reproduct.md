@@ -1,6 +1,6 @@
 +++
 title = "读论再生产"
-date = "2023-02-06T21:40:48+08:00"
+date = "2024-02-06T21:40:48+08:00"
 tags = ["philosophy", "阿尔都塞"]
 slug = "reproduct"
 dropCap = false
