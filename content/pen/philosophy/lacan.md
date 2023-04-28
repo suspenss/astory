@@ -5,7 +5,7 @@
  slug = "lacan" 
  description = ""
  # katex = true
- indent = true
+ # indent = true
 +++
 
 #### 斯宾诺莎的平行论
