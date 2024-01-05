@@ -1014,7 +1014,7 @@ fontFamilyTOC = ""
 # 说明文字
 fontFamilyCaption = ""
 # 页脚
-# fontFamilyFooter = "'Source Code Pro', 'Noto Serif SC', monospace"
+fontFamilyFooter = "monospace"
 # 主体
 fontFamilyBody = "'Shippori Mincho', 'Amstelvar', 'Noto Serif SC', serif"
 
