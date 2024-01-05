@@ -532,7 +532,7 @@ limitEntriesLimit = -1
 # 说明：分区的名字即站点的 content 目录下
 #      的文件夹的名字。
 
-mainSections = ["pen"]
+mainSections = ["tech", "pen"]
 
 
 ######################################
@@ -1006,7 +1006,7 @@ fontFamilyTitle = "'Shippori Mincho', 'Noto Serif SC', serif"
 # 分节标题、目录标题
 fontFamilyHeadings = "'Shippori Mincho', 'Noto Serif SC', 'Amstelvar', serif"
 # 代码、上标、文章元信息、文章更新徽章、文章的 Git 版本信息、极简页脚、不蒜子站点浏览计数
-fontFamilyCode = "'Source Code Pro', 'Noto Serif SC', monospace"
+fontFamilyCode = "'Fira Code', monospace"
 # 引用
 fontFamilyQuote = ""
 # 文章目录
@@ -1014,12 +1014,12 @@ fontFamilyTOC = ""
 # 说明文字
 fontFamilyCaption = ""
 # 页脚
-fontFamilyFooter = "'Source Code Pro', 'Noto Serif SC', monospace"
+# fontFamilyFooter = "'Source Code Pro', 'Noto Serif SC', monospace"
 # 主体
 fontFamilyBody = "'Shippori Mincho', 'Amstelvar', 'Noto Serif SC', serif"
 
 # 网络字体链接
-fontsLink = "https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;800&family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Noto+Serif+SC:wght@500;600;700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+fontsLink = "https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;800&family=Noto+Serif+SC:wght@500;600;700&family=Fira+Code:wght@400;700&display=swap"
 # fontsLink = ""
 # 说明：要想读者一定体验到你设置的字体，最好
 #      采用网络字体。MemE 主题目前仅支持
@@ -1040,7 +1040,7 @@ tabSize = 4
 ######################################
 ## 行间距
 
-lineHeight = 2
+lineHeight = 1.618
 # 说明：只会应用到文章的段落和目录
 
 ######################################
@@ -1064,7 +1064,7 @@ paragraphStyle = "margin"
 ## 两端对齐
 
 # 是否开启（全局设置）
-enableJustify = true
+enableJustify = false
 # 说明：文章的 Front Matter 中的 `align`
 #      的优先级高于此处
 
