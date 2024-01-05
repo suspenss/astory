@@ -1,13 +1,15 @@
 ---
-title: Functional Red-Black Tree Implemention
+title: Functional Red-Black Tree Implementation
 date: 2023-12-16
 tags:
  - OCaml
  - Functional Datastruct
  - Balanced Tree
-# summary:  
+## summary:  
 mathjax: true
----# Binary Search Tree
+---
+
+## Binary Search Tree
 
 Binary search tree, also called an ordered or sorted binary tree, is a
 rooted binary tree data structure with the key of each internal node
@@ -78,22 +80,20 @@ $h = \log(n + 1)$. But in the worest case, all nodes of the tree are
 right children of the parent node, so that the time complexity is
 degenerated $O(n)$.
 
-# Red-Black Tree
+## Red-Black Tree
 
 Red-Black Tree is a simple balanced tree data structure, which means it
 can keep balanced with good shape so that the operations are
 logarithmic.
 
 In RBT, every node have color red or black, the RI make tree balanced.
-
 1.  *Local Invariant:* there are no two adjacnet red node in any path.
-
 2.  *Global Invariant:* the number of black node in every path from root
     to leaf is equal.
 
 The ADT operations are same as BST : insertion, deletion.
 
-## Insertion (Okaskaki's algorithm)
+#### Insertion (Okaskaki's algorithm)
 
 When we insert elements into the tree, if we set the color black, we may
 violate global invariants, and if we set it red, we may violate local

@@ -229,8 +229,8 @@ identifier = "theme-switcher"
 #     identifier = "search"
 #     post = "search"
 [[menu.main]]
-pageref = "/pen/"
-name = "Pen"
+pageref = "/archives/"
+name = "Posts"
 weight = 2
 pre = "internal"
 # [[menu.main]]
@@ -845,7 +845,7 @@ displayWordCount = true
 wordCountIcon = "pencil-alt"
 
 # 是否显示阅读时长
-displayReadingTime = true
+displayReadingTime = false
 # 阅读时长的图标
 readingTimeIcon = "clock"
 
@@ -1006,20 +1006,20 @@ fontFamilyTitle = "'Shippori Mincho', 'Noto Serif SC', serif"
 # 分节标题、目录标题
 fontFamilyHeadings = "'Shippori Mincho', 'Noto Serif SC', 'Amstelvar', serif"
 # 代码、上标、文章元信息、文章更新徽章、文章的 Git 版本信息、极简页脚、不蒜子站点浏览计数
-fontFamilyCode = "'Fira Code', monospace"
+fontFamilyCode = "'Fira Code', 'Shippori Mincho', 'Noto Serif SC', monospace"
 # 引用
-fontFamilyQuote = ""
+fontFamilyQuote = "'Shippori Mincho', 'Noto Serif SC', serif"
 # 文章目录
-fontFamilyTOC = ""
+fontFamilyTOC = "'Shippori Mincho', 'Noto Serif SC', serif"
 # 说明文字
-fontFamilyCaption = ""
+fontFamilyCaption = "'Shippori Mincho', 'Noto Serif SC', serif"
 # 页脚
 fontFamilyFooter = "monospace"
 # 主体
-fontFamilyBody = "'Shippori Mincho', 'Amstelvar', 'Noto Serif SC', serif"
+fontFamilyBody = "'Shippori Mincho', 'Noto Serif SC', serif"
 
 # 网络字体链接
-fontsLink = "https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;800&family=Noto+Serif+SC:wght@500;600;700&family=Fira+Code:wght@400;700&display=swap"
+fontsLink = "https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;800&family=Noto+Serif+SC:wght@400;700;800&family=Fira+Code:wght@400;700&display=swap"
 # fontsLink = ""
 # 说明：要想读者一定体验到你设置的字体，最好
 #      采用网络字体。MemE 主题目前仅支持
