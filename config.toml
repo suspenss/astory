@@ -313,10 +313,10 @@ displayHeaderInHome = true
 # 说明：对弹性布局的顶栏无效
 
 # 背景
-# headerBackground = "linear-gradient(to right, #0000000a, #f7f8f63a)"    
+headerBackground = "auto"
 # headerBackground = "linear-gradient(90deg, #f795331a 0, #f370551a 15%, #ef4e7b1a 30%, #a166ab1a 44%, #5073b81a 58%, #1098ad1a 72%, #07b39b1a 86%, #6dba821a 100%)"
 # 说明：https://developer.mozilla.org/zh-CN/docs/Web/CSS/background
-headerBackground = "linear-gradient(to right, #f7f8f63a, #f7f8f63a)"
+# headerBackground = "linear-gradient(to right, #f7f8f63a, #f7f8f63a)"
 
 # 顶栏布局
 headerLayout = "flex"
@@ -566,7 +566,7 @@ defaultTheme = "light"
 # 是否隐藏模式切换开关
 hideThemeToggle = false
 # 是否在首页隐藏模式切换开关
-hideThemeToggleInHome = false
+hideThemeToggleInHome = true
 # 说明：如果开启了深色模式，即使你隐藏了开关，
 #      你的读者依然可能以深色模式阅读你的博
 #      客，如果该读者的系统设置为深色模式的
@@ -1030,7 +1030,7 @@ fontsLink = "https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;8
 ######################################
 ## 字号（单位：px）
 
-fontSize = 16
+fontSize = 15
 
 ######################################
 ## 制表符的宽度
