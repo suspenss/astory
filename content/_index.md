@@ -33,8 +33,8 @@ I am a bachelor student majoring in computer science.
 A notion site on my own. -->
 
 ##### Forest
-A forest of evergreen notes: [forest](https://epochess.github.io/forest/)
+A forest of evergreen notes: [forest](https://suspenss.github.io/forest/)
 
 ##### Contact
-\- Github: [github.com/epochess](https://github.com/epochess)        
+\- Github: [github.com/suspenss](https://github.com/suspenss)        
 \- Email: [tniasu.gmail.com]()
